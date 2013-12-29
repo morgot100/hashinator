@@ -1,5 +1,7 @@
 # Hashinator
 
+Check out the demo at [https://hashinator.herokuapp.com](https://hashinator.herokuapp.com)
+
 An Elance testing framework, originally forked from [LuckyLadyGame's
 Coffee-Express](https://github.com/luckyladygames/coffee-express) framework.
 
