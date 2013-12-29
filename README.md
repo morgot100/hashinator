@@ -1,7 +1,20 @@
-coffee-express 
-==============
+# Hashinator
 
-(Yet another Express+CoffeeScript template)
+An Elance testing framework, originally forked from [LuckyLadyGame's
+Coffee-Express](https://github.com/luckyladygames/coffee-express) framework.
+
+## Demonstration
+
+* Implement a SHA256 AJAX endpoint
+* Implement an scrypt AJAX endpoint
+* Integrate output into frontend code 
+* Change the dl/dd/dt tags to a table
+
+## Extra Points
+
+* implement CSS to make the site look nicer
+
+## about coffee-express 
 
 This is how I like to lay out my Express + CoffeeScript projects. It uses CoffeeScript 
 instead of JavaScript and it has bits to make the coffeescript compiling as transparent 
@@ -13,21 +26,10 @@ coffeescript first.
 
 For frontend development, the express middleware, [connect-coffee-script](https://github.com/wdavidw/node-connect-coffee-script) that compile and cache CoffeeScript just in time. The same goes for the stylus css generator. Just write your code in CoffeeScript or Stylus and ask for them as .js or .css files. 
 
-Dependencies
-============
-
-* [CoffeeScript](http://coffeescript.org) for client side and server development
-* [connect-coffee-script](ttps://github.com/wdavidw/node-connect-coffee-script)
-* [Mocha](http://visionmedia.github.com/mocha/) testing framework with should.js 
-* [Jade](http://jade-lang.com/) templates for HTML generation
-* [Stylus](http://learnboost.github.com/stylus/) for CSS generation
-* [Docco](http://jashkenas.github.com/docco/) for documentation generation
-
-Application Layout
-==================
+## Application Layout
 
     app/                    <- the application
-        lib/                <- put misc. libraries in here 
+        libs/               <- put misc. libraries in here 
         routes/             <- organize express routes in here
         views/              <- jade templates ...
         public/             <- public files (or ment to be public)
@@ -41,16 +43,7 @@ Application Layout
     Cakefile                <- App. specific tasks
     package.json            <- mmm. npm package definitions
 
-USING
-=====
 
-1. Git clone the repo
-1. Delete the .git directory
-1. `npm install`
-1. `git init` 
-1. push it to your own repo
-
-LICENSE
-=======
+## LICENSE
 
 MIT
