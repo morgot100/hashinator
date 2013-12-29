@@ -14,7 +14,7 @@ app.configure ->
     app.use express.bodyParser()
 
     env = app.get("env")
-    
+
     if env == "development"
         app.use express.errorHandler()
 
@@ -23,8 +23,8 @@ app.configure ->
     app.use stylus.middleware
         src:    "#{__base}/app/public/src"
         dest:   "#{__base}/app/public/generated"
-        
-        # in development mode we will force recompile 
+
+        # in development mode we will force recompile
         force:  if app.get("env") == "production" then false else true
         compile: (str, path) ->
             stylus(str)
@@ -32,7 +32,7 @@ app.configure ->
                 .set("compress", env == "production")
                 .use(nib())
                 .import('nib')
-    
+
     app.use connectCoffee
         src:    "#{__base}/app/public/src"
         dest:   "#{__base}/app/public/generated"
@@ -47,15 +47,15 @@ app.configure ->
     app.set 'views', "#{__base}/app/views"
 
 # Add routes to the application
-require("./routes/example")(app)
+require("./routes/main")(app)
 
 # Add in custom error handling middleware
-# Express applications require that error handling middleware 
-# happens after route declarations. So this is our last step 
+# Express applications require that error handling middleware
+# happens after route declarations. So this is our last step
 # Ref: http://expressjs.com/guide.html#error-handling
 
 app.use (err, req, res, next) ->
-    if req.xhr 
+    if req.xhr
         res.send error: err
     else
         res.send err
