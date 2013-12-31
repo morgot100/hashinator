@@ -20,3 +20,4 @@ module.exports = (app) ->
     # create an SHA256 implementation
 
     # create an scrypt implementation w/ N=1024, r=1, p=1
+    # password = "hashinator"
