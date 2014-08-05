@@ -7,23 +7,25 @@ html
                 var require = !{JSON.stringify(requireJSConfig)}
 
         script(data-main="/js/main.js", src="/js/require.js")
-
+        link(rel='stylesheet', href='/css/main.css')
     body
 
-        h1 Hashinator
+        main
+            h1.centered Hashinator
 
-        | Input:
-        input#input(value="Type something")
-        button#hashIt
-            span Get Hashes!
+            div.centered
+                label(for='input') Input:
+                input#input(placeholder="Type something", autofocus)
+                button#hashIt
+                    span Get Hashes!
 
-        br
-        dl
-            dt MD5
-            dd#md5 --
-            dt SHA1
-            dd#sha1 --
-            dt SHA256
-            dd#sha256 (to be implemented)
-            dt Scrypt (N:1024, r:1, p:1)
-            dd#scrypt (to be implemented)
+            br
+            dl
+                dt MD5
+                dd#md5 --
+                dt SHA1
+                dd#sha1 --
+                dt SHA256
+                dd#sha256 --
+                dt Scrypt (N:1024, r:1, p:1)
+                dd#scrypt (to be implemented)
